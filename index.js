@@ -5,7 +5,6 @@ app.use(cors());
 app.use(express.json({
     limit: '100mb'
 }));
-const port = 3003;
 
 app.post('/sendGreeting', (req, res) => {
     let day = new Date(req.body.dob).toLocaleString('en-us', {
@@ -16,6 +15,6 @@ app.post('/sendGreeting', (req, res) => {
     });
 });
 
-app.listen(port, () => {
+app.listen(process.env.PORT || 2024, () => {
     console.log('Server is listening on port: ' + port);
 });
