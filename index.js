@@ -16,5 +16,5 @@ app.post('/sendGreeting', (req, res) => {
 });
 
 app.listen(process.env.PORT || 2024, () => {
-    console.log('Server is listening on port: ' + port);
+    
 });
